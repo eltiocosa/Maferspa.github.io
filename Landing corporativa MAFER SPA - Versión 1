@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAFER SPA - Comercializadora de Materiales y Soluciones Industriales</title>
+  <meta name="description" content="MAFER SPA: Venta de materiales de construcción, zinc, contenedores marítimos y más. Sucursales en Quinta Normal y Pudahuel. ¡Contáctanos!">
+  <style>
+    body { 
+      font-family: Arial, Helvetica, sans-serif; 
+      margin: 0; 
+      padding: 0; 
+      background: #f8f9fa; 
+      color: #333; 
+      line-height: 1.6; 
+    }
+    header { 
+      background: #003366; /* Azul corporativo oscuro */
+      color: white; 
+      text-align: center; 
+      padding: 80px 20px; 
+    }
+    h1 { font-size: 48px; margin: 0; }
+    h2 { color: #003366; text-align: center; }
+    .container { 
+      max-width: 1100px; 
+      margin: 40px auto; 
+      padding: 0 20px; 
+    }
+    .section { 
+      background: white; 
+      padding: 40px; 
+      margin: 30px 0; 
+      border-radius: 10px; 
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+    }
+    .btn { 
+      display: inline-block; 
+      background: #28a745; /* Verde WhatsApp */
+      color: white; 
+      font-size: 24px; 
+      padding: 15px 40px; 
+      text-decoration: none; 
+      border-radius: 50px; 
+      margin: 20px 0; 
+    }
+    .btn:hover { background: #218838; }
+    footer { 
+      background: #003366; 
+      color: white; 
+      text-align: center; 
+      padding: 20px; 
+      margin-top: 40px; 
+    }
+    img { max-width: 100%; height: auto; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MAFER SPA</h1>
+    <p>Tu aliado en materiales de construcción y soluciones industriales</p>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2>¿Quiénes Somos?</h2>
+      <p>Somos MAFER SPA, una comercializadora especializada en la venta de materiales de construcción, zinc, contenedores marítimos (20 y 40 pies), estructuras metálicas y más. Ofrecemos productos de calidad a precios competitivos para proyectos de construcción, bodegas e industrias.</p>
+      <p>¡Contamos con sucursales estratégicas en Santiago para atenderte rápido!</p>
+    </div>
+
+    <div class="section">
+      <h2>Nuestros Productos y Servicios</h2>
+      <ul style="font-size: 20px; list-style: none; padding: 0;">
+        <li>✔️ Chapas de zinc y techumbres</li>
+        <li>✔️ Contenedores marítimos (nuevos y usados)</li>
+        <li>✔️ Materiales de construcción en general</li>
+        <li>✔️ Soluciones para bodegas, obras y transporte</li>
+        <li>✔️ Entregas rápidas y asesoría personalizada</li>
+      </ul>
+      <!-- Puedes subir fotos reales aquí después -->
+      <p><img src="https://via.placeholder.com/800x400?text=Contenedores+MAFER+SPA" alt="Contenedores MAFER SPA"></p>
+    </div>
+
+    <div class="section" style="text-align: center;">
+      <h2>¡Contáctanos Hoy!</h2>
+      <p>Sucursales:</p>
+      <p>📍 Mapocho 6006, Quinta Normal</p>
+      <p>📍 Serrano 1498, Pudahuel</p>
+      <p>📞 +569 9142 4291</p>
+      <p>🌐 www.maferspa.cl</p>
+      
+      <a href="https://wa.me/56991424291?text=Hola%20MAFER%20SPA!%20Quiero%20información%20sobre..." class="btn">
+        Chatea por WhatsApp Ahora
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>© 2026 MAFER SPA - Todos los derechos reservados | Villa Alemana / Santiago, Chile</p>
+  </footer>
+
+</body>
+</html>
