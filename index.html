@@ -5,106 +5,173 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Mafer SpA | Seguridad Privada y Control de Acceso</title>
-  <meta name="description" content="Mafer SpA: servicios de seguridad privada, control de acceso, vigilancia y soporte operativo para empresas e infraestructura crítica. Cotiza por WhatsApp o correo corporativo." />
+  <meta name="description" content="Mafer SpA: seguridad privada, control de acceso, vigilancia y apoyo operativo para empresas e infraestructura crítica. Cotiza por WhatsApp o correo corporativo." />
   <meta name="author" content="Mafer SpA">
-  <meta name="keywords" content="seguridad privada, vigilancia, guardias, control de acceso, CCTV, infraestructura crítica, aeropuertos, minería, Chile, cotización" />
+  <meta name="keywords" content="seguridad privada, guardias, vigilancia, control de acceso, CCTV, rondas, infraestructura crítica, Coquimbo, Chile" />
 
   <style>
     :root{
-      --bg:#0b1220;
-      --card:#111a2e;
-      --text:#e9eefc;
-      --muted:#b7c1dd;
-      --brand:#38bdf8;
-      --brand2:#22c55e;
-      --border:rgba(255,255,255,.10);
-      --shadow: 0 12px 28px rgba(0,0,0,.35);
+      --bg0:#060a13;
+      --bg1:#0a1224;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.08);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.72);
+      --border:rgba(255,255,255,.12);
+      --shadow: 0 16px 40px rgba(0,0,0,.45);
       --radius:18px;
-      --max:1100px;
+      --max:1140px;
+
+      /* “Seguridad” = autoridad + precisión */
+      --accent:#f4c95d;   /* gold */
+      --accent2:#4cc3ff;  /* blue */
+      --danger:#ff5d5d;
+      --ok:#4ade80;
     }
+
     *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(56,189,248,.18), transparent 60%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(34,197,94,.14), transparent 55%),
-                  var(--bg);
       color:var(--text);
-      line-height:1.5;
+      background:
+        radial-gradient(1100px 700px at 15% -10%, rgba(76,195,255,.16), transparent 60%),
+        radial-gradient(900px 600px at 95% 0%, rgba(244,201,93,.12), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      line-height:1.55;
     }
     a{color:inherit; text-decoration:none}
     .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+
+    /* HEADER */
     header{
-      position:sticky; top:0; z-index:10;
-      background: rgba(11,18,32,.72);
+      position:sticky; top:0; z-index:20;
+      background: rgba(6,10,19,.72);
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--border);
     }
-    .nav{display:flex; gap:14px; align-items:center; justify-content:space-between;}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;}
-    .logo{
-      width:36px; height:36px; border-radius:12px;
-      background: linear-gradient(135deg, var(--brand), var(--brand2));
-      box-shadow: var(--shadow);
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
     }
-    .menu{display:flex; gap:14px; flex-wrap:wrap}
-    .menu a{padding:10px 12px; border-radius:12px; color:var(--muted);}
-    .menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .brand{
+      display:flex; align-items:center; gap:12px;
+      font-weight:900; letter-spacing:.2px;
+    }
+    .badge{
+      width:40px; height:40px; border-radius:14px;
+      background:
+        radial-gradient(18px 18px at 30% 30%, rgba(76,195,255,.85), transparent 60%),
+        radial-gradient(22px 22px at 70% 70%, rgba(244,201,93,.9), transparent 62%),
+        rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.10);
+      box-shadow: var(--shadow);
+      display:grid; place-items:center;
+    }
+    .badge svg{opacity:.95}
+    .brand .name{display:flex; flex-direction:column; line-height:1.05}
+    .brand .name small{color:var(--muted); font-weight:600; letter-spacing:.12px}
+    .menu{display:flex; gap:10px; flex-wrap:wrap}
+    .menu a{
+      padding:10px 12px; border-radius:12px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .menu a:hover{
+      color:var(--text);
+      background: rgba(255,255,255,.05);
+      border-color: rgba(255,255,255,.10);
+    }
 
+    /* HERO */
+    .hero{
+      padding:56px 0 10px;
+      display:grid; grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
     .card{
-      background:rgba(17,26,46,.82);
+      background: var(--card);
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow: var(--shadow);
     }
-
-    .hero{
-      padding:54px 0 10px;
-      display:grid; grid-template-columns: 1.15fr .85fr;
-      gap:22px;
-      align-items:stretch;
-    }
     .hero-left{padding:28px}
-    h1{margin:0 0 10px; font-size:42px; line-height:1.08}
-    .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
-
-    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
-    .pill{
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.05);
-      padding:8px 10px;
-      border-radius:999px;
+    h1{
+      margin:0 0 10px;
+      font-size:44px; line-height:1.07;
+      letter-spacing:-.4px;
+    }
+    .sub{
+      margin:0 0 14px;
       color:var(--muted);
+      font-size:16px;
+      max-width:58ch;
+    }
+
+    .hero-strip{
+      margin-top:16px;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid rgba(244,201,93,.25);
+      background:
+        linear-gradient(135deg, rgba(244,201,93,.14), rgba(76,195,255,.06));
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      color:rgba(234,240,255,.86);
       font-size:13px;
     }
+    .dot{
+      width:8px; height:8px; border-radius:999px; display:inline-block;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(244,201,93,.12);
+      margin-right:8px;
+    }
 
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 12px}
+    .pill{
+      display:flex; gap:8px; align-items:center;
+      border:1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;
+      border-radius:999px;
+      color:rgba(234,240,255,.80);
+      font-size:13px;
+    }
+    .pill svg{opacity:.9}
+
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
+      gap:10px;
       padding:12px 14px; border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.06);
-      font-weight:700;
-      transition: transform .12s ease;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      font-weight:800;
+      transition: transform .12s ease, background .12s ease, border-color .12s ease;
     }
+    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.22)}
     .btn.primary{
-      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(34,197,94,.85));
-      border:0;
-      color:#06121f;
+      border:1px solid rgba(244,201,93,.32);
+      background: linear-gradient(135deg, rgba(244,201,93,.92), rgba(76,195,255,.20));
+      color:#0b1020;
     }
-    .btn:hover{transform: translateY(-1px)}
+    .btn.primary:hover{background: linear-gradient(135deg, rgba(244,201,93,.98), rgba(76,195,255,.26))}
+    .btn .tag{
+      font-size:12px;
+      color:rgba(11,16,32,.85);
+      background: rgba(255,255,255,.25);
+      padding:4px 8px;
+      border-radius:999px;
+    }
 
-    .hero-right{padding:20px; display:grid; gap:12px;}
-    .mini{padding:16px;}
-    .mini strong{display:block; margin-bottom:6px}
+    .hero-right{padding:18px; display:grid; gap:12px}
+    .mini{padding:16px; background: var(--card2); border:1px solid rgba(255,255,255,.12); border-radius:16px;}
+    .mini strong{display:flex; align-items:center; gap:8px; margin-bottom:6px}
     .mini span{color:var(--muted); font-size:14px}
+    .mini a{color: var(--accent2); text-decoration: underline; text-underline-offset: 3px}
 
+    /* SECTIONS */
     section{padding:26px 0}
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
-    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
-    .item{padding:18px}
-    .item h3{margin:0 0 8px}
-    .item p{margin:0; color:var(--muted)}
     .section-title{
       display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
       margin-bottom:14px;
@@ -112,30 +179,38 @@
     .section-title h2{margin:0; font-size:22px}
     .section-title p{margin:0; color:var(--muted); font-size:14px}
 
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .item{padding:18px}
+    .item h3{margin:0 0 8px; display:flex; align-items:center; gap:10px}
+    .item p{margin:0; color:var(--muted)}
+
+    .callout{
+      margin-top:14px;
+      padding:14px 16px;
+      border-radius:16px;
+      border:1px solid rgba(76,195,255,.18);
+      background: linear-gradient(135deg, rgba(76,195,255,.10), rgba(255,255,255,.03));
+      color:rgba(234,240,255,.82);
+      font-size:13px;
+    }
+
+    /* CONTACT */
     .contact{
       padding:22px;
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:14px;
     }
-    .contact a{color:var(--brand)}
-
-    .note{
-      margin-top:12px;
-      padding:12px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.04);
-      color:rgba(233,238,252,.78);
-      font-size:13px;
-    }
+    .contact a{color:var(--accent2); text-decoration: underline; text-underline-offset: 3px}
 
     footer{
-      padding:18px 0 40px;
-      color:rgba(233,238,252,.65);
+      padding:18px 0 44px;
+      color:rgba(234,240,255,.62);
       font-size:13px;
     }
 
+    /* MOBILE */
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr}
       h1{font-size:34px}
@@ -153,13 +228,23 @@
   <div class="wrap">
     <div class="nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>Mafer SpA</div>
+        <div class="badge" aria-hidden="true">
+          <!-- escudo minimal -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l7 4v6c0 5-3.2 9.3-7 10-3.8-.7-7-5-7-10V6l7-4z"
+                  stroke="rgba(234,240,255,.92)" stroke-width="1.6"/>
+            <path d="M9.2 12.2l1.8 1.8 3.8-4.3" stroke="rgba(244,201,93,.95)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="name">
+          <div>Mafer SpA</div>
+          <small>Seguridad privada · Control de acceso</small>
+        </div>
       </div>
 
       <nav class="menu" aria-label="Navegación">
         <a href="#servicios">Servicios</a>
-        <a href="#sectores">Sectores</a>
+        <a href="#compromisos">Compromisos</a>
         <a href="#mision-vision">Misión & Visión</a>
         <a href="#cobertura">Cobertura</a>
         <a href="#contacto">Contacto</a>
@@ -173,48 +258,93 @@
   <!-- HERO -->
   <div class="hero">
     <div class="card hero-left">
-      <h1>Seguridad privada<br/>con estándar corporativo</h1>
+      <h1>Protección, control<br/>y respuesta operativa</h1>
 
-      <p class="lead">
-        <strong>Mafer SpA</strong> entrega soluciones de seguridad y control de acceso para empresas,
-        obras e infraestructura crítica: personal calificado, procedimientos claros y respuesta oportuna.
+      <p class="sub">
+        <strong>Mafer SpA</strong> entrega servicios de seguridad privada con enfoque corporativo:
+        control de accesos, vigilancia, rondas y apoyo operativo para empresas e instalaciones de alta exigencia.
       </p>
 
       <div class="pill-row">
-        <div class="pill">✅ Control de acceso</div>
-        <div class="pill">✅ Vigilancia 24/7</div>
-        <div class="pill">✅ Protocolos operativos</div>
-        <div class="pill">✅ Reportabilidad</div>
-        <div class="pill">✅ Soporte en terreno</div>
+        <div class="pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l7 4v6c0 5-3.2 9.3-7 10-3.8-.7-7-5-7-10V6l7-4z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
+          </svg>
+          Protocolos claros
+        </div>
+        <div class="pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M20 7l-9 10-5-5" stroke="rgba(74,222,128,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Reportabilidad
+        </div>
+        <div class="pill">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 6v6l4 2" stroke="rgba(244,201,93,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z" stroke="rgba(234,240,255,.75)" stroke-width="1.6"/>
+          </svg>
+          Coordinación por turnos
+        </div>
       </div>
 
       <div class="cta">
         <a class="btn primary" target="_blank"
-           href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad%20y%20control%20de%20acceso.">
-          Cotizar por WhatsApp
+           href="https://wa.me/56974515523?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad%20(ubicaci%C3%B3n%2C%20horarios%20y%20tipo%20de%20recinto).">
+          <!-- icon whatsapp simple -->
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M20.5 11.9a8.5 8.5 0 0 1-12.3 7.6L3 21l1.6-5A8.5 8.5 0 1 1 20.5 11.9z" stroke="rgba(11,16,32,.85)" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M9.3 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4 0 .5l-.4.5c-.1.2-.2.4 0 .6.4.7 1.3 1.6 2.2 2 .2.1.4.1.6 0l.6-.4c.2-.1.4-.1.5 0l1.8.8c.3.1.4.3.4.5v.6c0 .3 0 .5-.4.7-.4.3-1.1.6-1.8.5-1.1-.2-2.5-.9-3.7-2.1-1.2-1.2-1.9-2.6-2.1-3.7-.1-.7.2-1.4.5-1.8z"
+                  fill="rgba(11,16,32,.75)"/>
+          </svg>
+          Cotizar por WhatsApp <span class="tag">rápido</span>
         </a>
+
         <a class="btn" href="mailto:contacto@maferspa.cl?subject=Cotizaci%C3%B3n%20Mafer%20SpA">
-          Correo corporativo
+          Enviar correo
         </a>
       </div>
 
-      <div class="note">
-        Trabajamos con enfoque en <strong>cumplimiento normativo</strong>, control de riesgos y comunicación fluida con contraparte.
+      <div class="hero-strip">
+        <span><span class="dot"></span><strong>Enfoque:</strong> prevención, control y continuidad operacional.</span>
+        <span>•</span>
+        <span><strong>Entrega:</strong> bitácoras, novedades y coordinación con contraparte.</span>
       </div>
     </div>
 
     <div class="hero-right">
-      <div class="card mini">
-        <strong>Base operativa</strong>
-        <span>📍 Villa Alemana, Región de Valparaíso, Chile</span>
+      <div class="mini">
+        <strong>
+          <!-- pin -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
+            <path d="M12 10.5a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" fill="rgba(244,201,93,.95)"/>
+          </svg>
+          Dirección
+        </strong>
+        <span>📍 Aníbal Pinto 1440, Segundo Piso, Coquimbo</span>
       </div>
-      <div class="card mini">
-        <strong>Disponibilidad</strong>
-        <span>🕒 Coordinación administrativa Lun–Vie | Operación según servicio</span>
+
+      <div class="mini">
+        <strong>
+          <!-- phone -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M6.5 3h2l1 5-2 1c1 3 3 5 6 6l1.1-2 5 1v2c0 1-1 2-2 2-8.3 0-15-6.7-15-15 0-1 1-2 2-2z" stroke="rgba(234,240,255,.85)" stroke-width="1.6" stroke-linejoin="round"/>
+          </svg>
+          Contacto
+        </strong>
+        <span>☎ +56 9 7451 5523<br/>✉ <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a></span>
       </div>
-      <div class="card mini">
-        <strong>Contacto directo</strong>
-        <span>✉️ contacto@maferspa.cl · ☎ +56 9 XXXXXXXX</span>
+
+      <div class="mini">
+        <strong>
+          <!-- clock -->
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
+            <path d="M12 6v6l4 2" stroke="rgba(76,195,255,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Coordinación
+        </strong>
+        <span>🕒 Atención administrativa Lun–Vie<br/>Operación según contrato / turnos</span>
       </div>
     </div>
   </div>
@@ -223,51 +353,55 @@
   <section id="servicios">
     <div class="section-title">
       <h2>Servicios</h2>
-      <p>Ofertas claras, ejecutables y auditables.</p>
+      <p>Seguridad ejecutable, medible y coordinada.</p>
     </div>
 
     <div class="grid3">
       <div class="card item">
-        <h3>Vigilancia y rondas</h3>
-        <p>Guardias, rondas planificadas, control perimetral y apoyo operativo con registro y novedades.</p>
+        <h3>
+          <span style="color:var(--accent)">▣</span> Vigilancia y rondas
+        </h3>
+        <p>Guardias, rondas planificadas, control perimetral y gestión de novedades con bitácora y reportes.</p>
       </div>
       <div class="card item">
-        <h3>Control de acceso</h3>
-        <p>Acceso peatonal/vehicular, acreditación, verificación, protocolos y coordinación con la contraparte.</p>
+        <h3>
+          <span style="color:var(--accent2)">▣</span> Control de acceso
+        </h3>
+        <p>Accesos peatonales y vehiculares, acreditación, verificación, protocolos y coordinación con contraparte.</p>
       </div>
       <div class="card item">
-        <h3>Sistemas de seguridad</h3>
-        <p>Apoyo en CCTV, alarmas y control de acceso: operación, revisión y coordinación de mantenciones.</p>
+        <h3>
+          <span style="color:var(--ok)">▣</span> Apoyo a sistemas
+        </h3>
+        <p>Operación y apoyo en CCTV, alarmas y control de acceso: revisión, registros y coordinación de mantenciones.</p>
       </div>
+    </div>
+
+    <div class="callout">
+      <strong>Enfoque operativo:</strong> prevención, control de riesgos y comunicación. La seguridad no es “presencia”; es procedimiento.
     </div>
   </section>
 
-  <!-- SECTORES -->
-  <section id="sectores">
+  <!-- COMPROMISOS -->
+  <section id="compromisos">
     <div class="section-title">
-      <h2>Sectores</h2>
-      <p>Experiencia y capacidad para entornos de alta exigencia.</p>
+      <h2>Compromisos operativos</h2>
+      <p>Lo que te asegura que esto funciona en la vida real.</p>
     </div>
 
     <div class="grid3">
       <div class="card item">
-        <h3>Infraestructura crítica</h3>
-        <p>Entornos con alta exposición y exigencia operacional: protocolos, control y comunicación.</p>
+        <h3><span style="color:var(--accent)">▣</span> Reportabilidad</h3>
+        <p>Novedades claras, bitácoras y escalamiento según severidad (incidente, observación, hallazgo).</p>
       </div>
       <div class="card item">
-        <h3>Obras y faenas</h3>
-        <p>Control de acceso, rondas, bitácoras, coordinación con jefaturas y prevención de incidentes.</p>
+        <h3><span style="color:var(--accent2)">▣</span> Coordinación</h3>
+        <p>Punto de contacto definido, coordinación por turnos y continuidad operacional en servicios críticos.</p>
       </div>
       <div class="card item">
-        <h3>Transporte y recintos</h3>
-        <p>Recintos de tránsito y operación: accesos, perímetro, turnos y reportabilidad para cliente.</p>
+        <h3><span style="color:var(--ok)">▣</span> Mejora continua</h3>
+        <p>Revisión de procedimientos, control de puntos vulnerables y ajustes según operación y entorno.</p>
       </div>
-    </div>
-
-    <!-- EXPERIENCIA (prudente) -->
-    <div class="note" style="margin-top:14px;">
-      <strong>Experiencia reciente:</strong> participación en procesos y servicios asociados a operaciones de alta criticidad (incluyendo entorno aeroportuario).
-      <span style="color:rgba(233,238,252,.65);">Información detallada disponible a solicitud, por confidencialidad contractual.</span>
     </div>
   </section>
 
@@ -275,23 +409,23 @@
   <section id="mision-vision">
     <div class="section-title">
       <h2>Misión & Visión</h2>
-      <p>Lo que prometemos y lo que construimos.</p>
+      <p>Seriedad, sin humo.</p>
     </div>
 
     <div class="grid2">
       <div class="card item">
         <h3>Misión</h3>
         <p>
-          Entregar servicios de seguridad privada con estándares corporativos, enfocándonos en la prevención,
-          el control de accesos y la continuidad operacional, con personal capacitado y procedimientos verificables.
+          Entregar servicios de seguridad privada con estándares corporativos, enfocándonos en prevención,
+          control de acceso y continuidad operacional, con procedimientos verificables y comunicación efectiva.
         </p>
       </div>
 
       <div class="card item">
         <h3>Visión</h3>
         <p>
-          Consolidarnos como un proveedor confiable para empresas e infraestructura crítica en Chile,
-          expandiendo cobertura regional y fortaleciendo nuestra capacidad operativa y tecnológica.
+          Consolidarnos como un proveedor confiable en Chile para empresas e instalaciones de alta exigencia,
+          fortaleciendo capacidad operativa, reportabilidad e integración con sistemas de seguridad.
         </p>
       </div>
     </div>
@@ -301,21 +435,21 @@
   <section id="cobertura">
     <div class="section-title">
       <h2>Cobertura</h2>
-      <p>Operación regional con proyección nacional.</p>
+      <p>Base en Coquimbo, operación según planificación.</p>
     </div>
 
     <div class="grid2">
       <div class="card item">
-        <h3>Área cubierta</h3>
+        <h3>Área principal</h3>
         <p>
-          ✅ Región de Valparaíso (Villa Alemana, Quilpué, Viña del Mar, Valparaíso y alrededores).<br>
-          ✅ Servicios en otras regiones según requerimiento y planificación operativa.
+          ✅ Coquimbo y alrededores.<br>
+          ✅ Servicios en otras regiones según requerimiento del cliente y coordinación operativa.
         </p>
       </div>
       <div class="card item">
         <h3>Áreas por cubrir</h3>
         <p>
-          🎯 Zona norte (Atacama / Antofagasta) y RM según demanda.<br>
+          🎯 Región de Atacama / Antofagasta y RM según demanda.<br>
           🎯 Disponibilidad para contratos con operación por turnos y coordinación con contraparte.
         </p>
       </div>
@@ -326,21 +460,21 @@
   <section id="contacto">
     <div class="section-title">
       <h2>Contacto</h2>
-      <p>Te respondemos rápido con una propuesta clara.</p>
+      <p>Cotización rápida con información mínima.</p>
     </div>
 
     <div class="card contact">
       <div>
-        <h3>Datos</h3>
+        <h3>Datos corporativos</h3>
         <p style="margin:0; color: var(--muted);">
           <strong>Mafer SpA</strong><br/>
-          📍 Villa Alemana, Región de Valparaíso, Chile<br/>
-          📞 Teléfono / WhatsApp: +56 9 XXXXXXXX<br/>
+          📍 Aníbal Pinto 1440, Segundo Piso, Coquimbo<br/>
+          📞 Teléfono / WhatsApp: +56 9 7451 5523<br/>
           ✉️ Correo corporativo: <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a>
         </p>
 
-        <div class="note">
-          Para cotizar: indica <strong>ubicación</strong>, <strong>horarios/turnos</strong> y <strong>tipo de recinto</strong>.
+        <div class="callout">
+          Para cotizar, indica: <strong>ubicación</strong>, <strong>tipo de recinto</strong>, <strong>cantidad de puestos</strong> y <strong>turnos</strong>.
         </div>
       </div>
 
@@ -348,14 +482,14 @@
         <h3>Acción rápida</h3>
         <div class="cta">
           <a class="btn primary" target="_blank"
-             href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad.%20Mi%20recinto%20est%C3%A1%20en%20____%20y%20necesito%20turnos%20____.">
-            Cotizar por WhatsApp
+             href="https://wa.me/56974515523?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20seguridad.%20Ubicaci%C3%B3n%3A%20____%20%7C%20Recinto%3A%20____%20%7C%20Turnos%3A%20____%20%7C%20Puestos%3A%20____.">
+            Cotizar por WhatsApp <span class="tag">prioridad</span>
           </a>
           <a class="btn" href="#servicios">Ver servicios</a>
         </div>
 
         <p style="margin:10px 0 0; color: var(--muted); font-size:13px;">
-          Respuesta en horario hábil. Operación según programación del servicio.
+          Respuesta en horario hábil. Coordinación de operación según programación del servicio.
         </p>
       </div>
     </div>
