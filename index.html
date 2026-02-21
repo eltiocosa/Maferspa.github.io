@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta name="author" content="Mafer SpA">
-  <meta name="keywords" content="seguridad privada, vigilancia, mantención de seguridad, aeropuerto, SACYR, Aeropuerto del Norte, Valparaíso, Antofagasta, Atacama, cotización rápida">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mafer SpA | Seguridad Profesional para Infraestructuras Críticas</title>
-  <meta name="description" content="Mafer SpA: Servicios de seguridad privada, vigilancia y mantención. Adjudicados para la seguridad de la Red Aeroportuaria Norte de Chile (SACYR). Cotiza por WhatsApp o correo corporativo." />
+
+  <title>Mafer SpA | Seguridad Privada y Control de Acceso</title>
+  <meta name="description" content="Mafer SpA: servicios de seguridad privada, control de acceso, vigilancia y soporte operativo para empresas e infraestructura crítica. Cotiza por WhatsApp o correo corporativo." />
+  <meta name="author" content="Mafer SpA">
+  <meta name="keywords" content="seguridad privada, vigilancia, guardias, control de acceso, CCTV, infraestructura crítica, aeropuertos, minería, Chile, cotización" />
+
   <style>
     :root{
       --bg:#0b1220;
@@ -24,8 +26,8 @@
     body{
       margin:0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: radial-gradient(1200px 700px at 20% -10%, rgba(56,189,248,.22), transparent 60%),
-                  radial-gradient(900px 600px at 90% 10%, rgba(34,197,94,.18), transparent 55%),
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(56,189,248,.18), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(34,197,94,.14), transparent 55%),
                   var(--bg);
       color:var(--text);
       line-height:1.5;
@@ -38,38 +40,34 @@
       backdrop-filter: blur(10px);
       border-bottom:1px solid var(--border);
     }
-    .nav{
-      display:flex; gap:14px; align-items:center; justify-content:space-between;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
-    }
+    .nav{display:flex; gap:14px; align-items:center; justify-content:space-between;}
+    .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;}
     .logo{
       width:36px; height:36px; border-radius:12px;
       background: linear-gradient(135deg, var(--brand), var(--brand2));
       box-shadow: var(--shadow);
     }
     .menu{display:flex; gap:14px; flex-wrap:wrap}
-    .menu a{
-      padding:10px 12px; border-radius:12px;
-      color:var(--muted);
-    }
+    .menu a{padding:10px 12px; border-radius:12px; color:var(--muted);}
     .menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-    .hero{
-      padding:54px 0 10px;
-      display:grid; grid-template-columns: 1.2fr .8fr;
-      gap:22px;
-      align-items:stretch;
-    }
+
     .card{
-      background:rgba(17,26,46,.8);
+      background:rgba(17,26,46,.82);
       border:1px solid var(--border);
       border-radius:var(--radius);
       box-shadow: var(--shadow);
     }
+
+    .hero{
+      padding:54px 0 10px;
+      display:grid; grid-template-columns: 1.15fr .85fr;
+      gap:22px;
+      align-items:stretch;
+    }
     .hero-left{padding:28px}
     h1{margin:0 0 10px; font-size:42px; line-height:1.08}
     .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
+
     .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
     .pill{
       border:1px solid var(--border);
@@ -79,6 +77,7 @@
       color:var(--muted);
       font-size:13px;
     }
+
     .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
@@ -86,6 +85,7 @@
       border:1px solid var(--border);
       background:rgba(255,255,255,.06);
       font-weight:700;
+      transition: transform .12s ease;
     }
     .btn.primary{
       background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(34,197,94,.85));
@@ -93,15 +93,12 @@
       color:#06121f;
     }
     .btn:hover{transform: translateY(-1px)}
-    .hero-right{
-      padding:20px;
-      display:grid; gap:12px;
-    }
-    .mini{
-      padding:16px;
-    }
+
+    .hero-right{padding:20px; display:grid; gap:12px;}
+    .mini{padding:16px;}
     .mini strong{display:block; margin-bottom:6px}
     .mini span{color:var(--muted); font-size:14px}
+
     section{padding:26px 0}
     .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
     .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
@@ -114,6 +111,7 @@
     }
     .section-title h2{margin:0; font-size:22px}
     .section-title p{margin:0; color:var(--muted); font-size:14px}
+
     .contact{
       padding:22px;
       display:grid;
@@ -121,11 +119,23 @@
       gap:14px;
     }
     .contact a{color:var(--brand)}
+
+    .note{
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.04);
+      color:rgba(233,238,252,.78);
+      font-size:13px;
+    }
+
     footer{
       padding:18px 0 40px;
       color:rgba(233,238,252,.65);
       font-size:13px;
     }
+
     @media (max-width: 900px){
       .hero{grid-template-columns: 1fr}
       h1{font-size:34px}
@@ -136,7 +146,9 @@
     }
   </style>
 </head>
+
 <body>
+
 <header>
   <div class="wrap">
     <div class="nav">
@@ -144,8 +156,10 @@
         <div class="logo" aria-hidden="true"></div>
         <div>Mafer SpA</div>
       </div>
+
       <nav class="menu" aria-label="Navegación">
         <a href="#servicios">Servicios</a>
+        <a href="#sectores">Sectores</a>
         <a href="#mision-vision">Misión & Visión</a>
         <a href="#cobertura">Cobertura</a>
         <a href="#contacto">Contacto</a>
@@ -153,44 +167,54 @@
     </div>
   </div>
 </header>
+
 <main class="wrap">
+
   <!-- HERO -->
   <div class="hero">
     <div class="card hero-left">
-      <h1>Seguridad profesional<br/>para infraestructuras críticas</h1>
+      <h1>Seguridad privada<br/>con estándar corporativo</h1>
+
       <p class="lead">
-        <strong>Mafer SpA</strong> — Especialistas en vigilancia privada, control de acceso y mantención de sistemas de seguridad. 
-        <strong>Adjudicados recientemente por SACYR</strong> para la seguridad de la <strong>Red Aeroportuaria Norte de Chile</strong> (Aeropuertos de Antofagasta y Atacama).
+        <strong>Mafer SpA</strong> entrega soluciones de seguridad y control de acceso para empresas,
+        obras e infraestructura crítica: personal calificado, procedimientos claros y respuesta oportuna.
       </p>
+
       <div class="pill-row">
-        <div class="pill">✅ Seguridad Aeroportuaria</div>
+        <div class="pill">✅ Control de acceso</div>
         <div class="pill">✅ Vigilancia 24/7</div>
-        <div class="pill">✅ Cumplimiento normativo OS10</div>
-        <div class="pill">✅ Cotización inmediata</div>
-        <div class="pill">✅ Expansión Norte de Chile</div>
+        <div class="pill">✅ Protocolos operativos</div>
+        <div class="pill">✅ Reportabilidad</div>
+        <div class="pill">✅ Soporte en terreno</div>
       </div>
+
       <div class="cta">
         <a class="btn primary" target="_blank"
-           href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20soy%20de%20SACYR%20o%20interesado%20en%20seguridad%20aeroportuaria.%20Quiero%20cotizar.">
+           href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad%20y%20control%20de%20acceso.">
           Cotizar por WhatsApp
         </a>
-        <a class="btn" href="mailto:contacto@maferspa.cl?subject=Cotizaci%C3%B3n%20Mafer%20SpA%20-%20Seguridad">
+        <a class="btn" href="mailto:contacto@maferspa.cl?subject=Cotizaci%C3%B3n%20Mafer%20SpA">
           Correo corporativo
         </a>
       </div>
+
+      <div class="note">
+        Trabajamos con enfoque en <strong>cumplimiento normativo</strong>, control de riesgos y comunicación fluida con contraparte.
+      </div>
     </div>
+
     <div class="hero-right">
       <div class="card mini">
-        <strong>Dirección</strong>
+        <strong>Base operativa</strong>
         <span>📍 Villa Alemana, Región de Valparaíso, Chile</span>
       </div>
       <div class="card mini">
-        <strong>Horario</strong>
-        <span>🕒 Lun–Vie 08:00–18:00 | Atención 24/7 en terreno</span>
+        <strong>Disponibilidad</strong>
+        <span>🕒 Coordinación administrativa Lun–Vie | Operación según servicio</span>
       </div>
       <div class="card mini">
-        <strong>Área principal</strong>
-        <span>🗺️ Valparaíso + Red Aeroportuaria Norte (SACYR)</span>
+        <strong>Contacto directo</strong>
+        <span>✉️ contacto@maferspa.cl · ☎ +56 9 XXXXXXXX</span>
       </div>
     </div>
   </div>
@@ -198,22 +222,52 @@
   <!-- SERVICIOS -->
   <section id="servicios">
     <div class="section-title">
-      <h2>Servicios Profesionales</h2>
-      <p>Seguridad confiable, certificada y adaptada a grandes proyectos.</p>
+      <h2>Servicios</h2>
+      <p>Ofertas claras, ejecutables y auditables.</p>
     </div>
+
     <div class="grid3">
       <div class="card item">
-        <h3>Vigilancia y Seguridad Privada</h3>
-        <p>Vigilantes OS10 calificados, patrullajes, control perimetral y respuesta inmediata. Ideal para empresas, condominios y obras.</p>
+        <h3>Vigilancia y rondas</h3>
+        <p>Guardias, rondas planificadas, control perimetral y apoyo operativo con registro y novedades.</p>
       </div>
       <div class="card item">
-        <h3>Seguridad Aeroportuaria e Infraestructura Crítica</h3>
-        <p>Servicios especializados para aeropuertos, puertos y minería. Adjudicados para la Red Aeroportuaria Norte con SACYR.</p>
+        <h3>Control de acceso</h3>
+        <p>Acceso peatonal/vehicular, acreditación, verificación, protocolos y coordinación con la contraparte.</p>
       </div>
       <div class="card item">
-        <h3>Mantención y Sistemas de Seguridad</h3>
-        <p>Instalación y mantención de CCTV, alarmas, control de acceso y sistemas de videovigilancia. Soporte 24/7.</p>
+        <h3>Sistemas de seguridad</h3>
+        <p>Apoyo en CCTV, alarmas y control de acceso: operación, revisión y coordinación de mantenciones.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- SECTORES -->
+  <section id="sectores">
+    <div class="section-title">
+      <h2>Sectores</h2>
+      <p>Experiencia y capacidad para entornos de alta exigencia.</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card item">
+        <h3>Infraestructura crítica</h3>
+        <p>Entornos con alta exposición y exigencia operacional: protocolos, control y comunicación.</p>
+      </div>
+      <div class="card item">
+        <h3>Obras y faenas</h3>
+        <p>Control de acceso, rondas, bitácoras, coordinación con jefaturas y prevención de incidentes.</p>
+      </div>
+      <div class="card item">
+        <h3>Transporte y recintos</h3>
+        <p>Recintos de tránsito y operación: accesos, perímetro, turnos y reportabilidad para cliente.</p>
+      </div>
+    </div>
+
+    <!-- EXPERIENCIA (prudente) -->
+    <div class="note" style="margin-top:14px;">
+      <strong>Experiencia reciente:</strong> participación en procesos y servicios asociados a operaciones de alta criticidad (incluyendo entorno aeroportuario).
+      <span style="color:rgba(233,238,252,.65);">Información detallada disponible a solicitud, por confidencialidad contractual.</span>
     </div>
   </section>
 
@@ -221,16 +275,24 @@
   <section id="mision-vision">
     <div class="section-title">
       <h2>Misión & Visión</h2>
-      <p>Compromiso real con la seguridad y el crecimiento.</p>
+      <p>Lo que prometemos y lo que construimos.</p>
     </div>
+
     <div class="grid2">
       <div class="card item">
         <h3>Misión</h3>
-        <p>Entregar servicios de seguridad privada de excelencia, con personal altamente capacitado, tecnología de punta y cumplimiento estricto de la normativa vigente, garantizando protección integral a nuestros clientes en todo el territorio nacional.</p>
+        <p>
+          Entregar servicios de seguridad privada con estándares corporativos, enfocándonos en la prevención,
+          el control de accesos y la continuidad operacional, con personal capacitado y procedimientos verificables.
+        </p>
       </div>
+
       <div class="card item">
         <h3>Visión</h3>
-        <p>Ser la empresa de referencia en seguridad para infraestructuras críticas en Chile, consolidando nuestra presencia desde la Región de Valparaíso hasta el Norte Grande, con innovación constante y alianzas estratégicas como la de SACYR.</p>
+        <p>
+          Consolidarnos como un proveedor confiable para empresas e infraestructura crítica en Chile,
+          expandiendo cobertura regional y fortaleciendo nuestra capacidad operativa y tecnológica.
+        </p>
       </div>
     </div>
   </section>
@@ -238,23 +300,23 @@
   <!-- COBERTURA -->
   <section id="cobertura">
     <div class="section-title">
-      <h2>Cobertura Nacional en Expansión</h2>
-      <p>Donde estamos hoy y hacia dónde crecemos.</p>
+      <h2>Cobertura</h2>
+      <p>Operación regional con proyección nacional.</p>
     </div>
+
     <div class="grid2">
       <div class="card item">
-        <h3>Área cubierta actualmente</h3>
+        <h3>Área cubierta</h3>
         <p>
-          ✅ Región de Valparaíso (Villa Alemana, Quilpué, Viña del Mar, Valparaíso y alrededores)<br>
-          ✅ Red Aeroportuaria Norte de Chile (Aeropuerto Andrés Sabella de Antofagasta y Aeropuerto Desierto de Atacama en Caldera) — Contrato SACYR
+          ✅ Región de Valparaíso (Villa Alemana, Quilpué, Viña del Mar, Valparaíso y alrededores).<br>
+          ✅ Servicios en otras regiones según requerimiento y planificación operativa.
         </p>
       </div>
       <div class="card item">
-        <h3>Expansión inmediata</h3>
+        <h3>Áreas por cubrir</h3>
         <p>
-          🎯 Norte Grande (Región de Antofagasta y Atacama)<br>
-          🎯 Proyectos mineros y de infraestructura crítica<br>
-          🎯 Disponible según demanda en RM y Biobío
+          🎯 Zona norte (Atacama / Antofagasta) y RM según demanda.<br>
+          🎯 Disponibilidad para contratos con operación por turnos y coordinación con contraparte.
         </p>
       </div>
     </div>
@@ -263,9 +325,10 @@
   <!-- CONTACTO -->
   <section id="contacto">
     <div class="section-title">
-      <h2>Contacto Corporativo</h2>
-      <p>Respuesta en menos de 1 hora hábil.</p>
+      <h2>Contacto</h2>
+      <p>Te respondemos rápido con una propuesta clara.</p>
     </div>
+
     <div class="card contact">
       <div>
         <h3>Datos</h3>
@@ -275,30 +338,38 @@
           📞 Teléfono / WhatsApp: +56 9 XXXXXXXX<br/>
           ✉️ Correo corporativo: <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a>
         </p>
+
+        <div class="note">
+          Para cotizar: indica <strong>ubicación</strong>, <strong>horarios/turnos</strong> y <strong>tipo de recinto</strong>.
+        </div>
       </div>
+
       <div>
         <h3>Acción rápida</h3>
         <div class="cta">
           <a class="btn primary" target="_blank"
-             href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad%20(SACYR%20o%20particular).">
+             href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad.%20Mi%20recinto%20est%C3%A1%20en%20____%20y%20necesito%20turnos%20____.">
             Cotizar por WhatsApp
           </a>
-          <a class="btn" href="#servicios">Ver todos los servicios</a>
+          <a class="btn" href="#servicios">Ver servicios</a>
         </div>
+
         <p style="margin:10px 0 0; color: var(--muted); font-size:13px;">
-          Menciona “SACYR Aeropuerto Norte” para prioridad en cotización.
+          Respuesta en horario hábil. Operación según programación del servicio.
         </p>
       </div>
     </div>
   </section>
 
   <footer>
-    © <span id="year"></span> Mafer SpA — Sitio web oficial. Todos los derechos reservados.<br>
-    Empresa en actualización corporativa 2026 | Licitación ganada SACYR – Red Aeroportuaria Norte
+    © <span id="year"></span> Mafer SpA — Sitio web corporativo.
   </footer>
+
 </main>
+
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
