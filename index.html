@@ -1,509 +1,880 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mafer SpA - Seguridad Privada Profesional en Chile | Vigilancia e Infraestructura Crítica</title>
+    <meta name="description" content="Mafer SpA ofrece servicios de seguridad privada profesional en Chile. Especialistas en vigilancia, protección de infraestructura crítica y cumplimiento OS10. Cobertura según requerimiento.">
+    <meta name="keywords" content="seguridad privada Chile, vigilancia OS10, seguridad infraestructura crítica, Mafer SpA, Coquimbo, Antofagasta, Atacama, aeropuertos, puertos, minería">
+    <meta name="author" content="Mafer SpA">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://maferspa.cl/">
+    <meta property="og:title" content="Mafer SpA - Seguridad Privada Profesional en Chile">
+    <meta property="og:description" content="Servicios de seguridad privada, vigilancia y protección de infraestructura crítica. Cumplimiento OS10, cobertura según requerimiento.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://maferspa.cl/">
+    <meta property="twitter:title" content="Mafer SpA - Seguridad Privada Profesional">
+    <meta property="twitter:description" content="Especialistas en seguridad para infraestructura crítica en Chile">
 
-  <title>Mafer SpA | Seguridad Privada y Control de Acceso</title>
-  <meta name="description" content="Mafer SpA: seguridad privada, control de acceso, vigilancia y apoyo operativo para empresas e infraestructura crítica. Cotiza por WhatsApp o correo corporativo." />
-  <meta name="author" content="Mafer SpA">
-  <meta name="keywords" content="seguridad privada, guardias, vigilancia, control de acceso, CCTV, rondas, infraestructura crítica, Coquimbo, Chile" />
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            /* Colores principales */
+            --color-primary: #0b1220;
+            --color-accent: #38bdf8;
+            --color-secondary: #22c55e;
+            --color-text: #e9eefc;
+            --color-text-muted: #94a3b8;
+            --color-white: #ffffff;
+            --color-gray-light: #f8fafc;
+            --color-gray-dark: #1e293b;
+            
+            /* Gradientes */
+            --gradient-primary: radial-gradient(circle at 30% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+                               radial-gradient(circle at 70% 80%, rgba(34, 197, 94, 0.1) 0%, transparent 50%),
+                               linear-gradient(135deg, #0b1220 0%, #1e293b 100%);
+            --gradient-card: linear-gradient(135deg, rgba(56, 189, 248, 0.05) 0%, rgba(34, 197, 94, 0.03) 100%);
+            
+            /* Sombras */
+            --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-glow: 0 0 20px rgba(56, 189, 248, 0.3);
+            
+            /* Espaciado */
+            --container-padding: 1rem;
+            --section-padding: 4rem 0;
+            --header-height: 80px;
+        }
 
-  <style>
-    :root{
-      --bg0:#060a13;
-      --bg1:#0a1224;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.08);
-      --text:#eaf0ff;
-      --muted:rgba(234,240,255,.72);
-      --border:rgba(255,255,255,.12);
-      --shadow: 0 16px 40px rgba(0,0,0,.45);
-      --radius:18px;
-      --max:1140px;
+        /* ===== RESET Y BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      /* “Seguridad” = autoridad + precisión */
-      --accent:#f4c95d;   /* gold */
-      --accent2:#4cc3ff;  /* blue */
-      --danger:#ff5d5d;
-      --ok:#4ade80;
-    }
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            scroll-padding-top: var(--header-height);
+        }
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1100px 700px at 15% -10%, rgba(76,195,255,.16), transparent 60%),
-        radial-gradient(900px 600px at 95% 0%, rgba(244,201,93,.12), transparent 55%),
-        linear-gradient(180deg, var(--bg0), var(--bg1));
-      line-height:1.55;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--color-text);
+            background: var(--gradient-primary);
+            min-height: 100vh;
+        }
 
-    /* HEADER */
-    header{
-      position:sticky; top:0; z-index:20;
-      background: rgba(6,10,19,.72);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid var(--border);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:12px;
-      font-weight:900; letter-spacing:.2px;
-    }
-    .badge{
-      width:40px; height:40px; border-radius:14px;
-      background:
-        radial-gradient(18px 18px at 30% 30%, rgba(76,195,255,.85), transparent 60%),
-        radial-gradient(22px 22px at 70% 70%, rgba(244,201,93,.9), transparent 62%),
-        rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      box-shadow: var(--shadow);
-      display:grid; place-items:center;
-    }
-    .badge svg{opacity:.95}
-    .brand .name{display:flex; flex-direction:column; line-height:1.05}
-    .brand .name small{color:var(--muted); font-weight:600; letter-spacing:.12px}
-    .menu{display:flex; gap:10px; flex-wrap:wrap}
-    .menu a{
-      padding:10px 12px; border-radius:12px;
-      color:var(--muted);
-      border:1px solid transparent;
-    }
-    .menu a:hover{
-      color:var(--text);
-      background: rgba(255,255,255,.05);
-      border-color: rgba(255,255,255,.10);
-    }
+        /* ===== UTILIDADES ===== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--container-padding);
+        }
 
-    /* HERO */
-    .hero{
-      padding:56px 0 10px;
-      display:grid; grid-template-columns: 1.2fr .8fr;
-      gap:18px;
-      align-items:stretch;
-    }
-    .card{
-      background: var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      box-shadow: var(--shadow);
-    }
-    .hero-left{padding:28px}
-    h1{
-      margin:0 0 10px;
-      font-size:44px; line-height:1.07;
-      letter-spacing:-.4px;
-    }
-    .sub{
-      margin:0 0 14px;
-      color:var(--muted);
-      font-size:16px;
-      max-width:58ch;
-    }
+        .section {
+            padding: var(--section-padding);
+        }
 
-    .hero-strip{
-      margin-top:16px;
-      padding:14px;
-      border-radius:16px;
-      border:1px solid rgba(244,201,93,.25);
-      background:
-        linear-gradient(135deg, rgba(244,201,93,.14), rgba(76,195,255,.06));
-      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-      color:rgba(234,240,255,.86);
-      font-size:13px;
-    }
-    .dot{
-      width:8px; height:8px; border-radius:999px; display:inline-block;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(244,201,93,.12);
-      margin-right:8px;
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-height: 44px; /* Touch target */
+        }
 
-    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 12px}
-    .pill{
-      display:flex; gap:8px; align-items:center;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      padding:8px 10px;
-      border-radius:999px;
-      color:rgba(234,240,255,.80);
-      font-size:13px;
-    }
-    .pill svg{opacity:.9}
+        .btn-primary {
+            background: var(--color-accent);
+            color: var(--color-white);
+            box-shadow: var(--shadow-card);
+        }
 
-    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      gap:10px;
-      padding:12px 14px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.05);
-      font-weight:800;
-      transition: transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .btn:hover{transform: translateY(-1px); border-color: rgba(255,255,255,.22)}
-    .btn.primary{
-      border:1px solid rgba(244,201,93,.32);
-      background: linear-gradient(135deg, rgba(244,201,93,.92), rgba(76,195,255,.20));
-      color:#0b1020;
-    }
-    .btn.primary:hover{background: linear-gradient(135deg, rgba(244,201,93,.98), rgba(76,195,255,.26))}
-    .btn .tag{
-      font-size:12px;
-      color:rgba(11,16,32,.85);
-      background: rgba(255,255,255,.25);
-      padding:4px 8px;
-      border-radius:999px;
-    }
+        .btn-primary:hover {
+            background: #0ea5e9;
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
 
-    .hero-right{padding:18px; display:grid; gap:12px}
-    .mini{padding:16px; background: var(--card2); border:1px solid rgba(255,255,255,.12); border-radius:16px;}
-    .mini strong{display:flex; align-items:center; gap:8px; margin-bottom:6px}
-    .mini span{color:var(--muted); font-size:14px}
-    .mini a{color: var(--accent2); text-decoration: underline; text-underline-offset: 3px}
+        .btn-secondary {
+            background: var(--color-secondary);
+            color: var(--color-white);
+            box-shadow: var(--shadow-card);
+        }
 
-    /* SECTIONS */
-    section{padding:26px 0}
-    .section-title{
-      display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
-      margin-bottom:14px;
-    }
-    .section-title h2{margin:0; font-size:22px}
-    .section-title p{margin:0; color:var(--muted); font-size:14px}
+        .btn-secondary:hover {
+            background: #16a34a;
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
 
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
-    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
-    .item{padding:18px}
-    .item h3{margin:0 0 8px; display:flex; align-items:center; gap:10px}
-    .item p{margin:0; color:var(--muted)}
+        .btn-outline {
+            background: transparent;
+            color: var(--color-accent);
+            border: 2px solid var(--color-accent);
+        }
 
-    .callout{
-      margin-top:14px;
-      padding:14px 16px;
-      border-radius:16px;
-      border:1px solid rgba(76,195,255,.18);
-      background: linear-gradient(135deg, rgba(76,195,255,.10), rgba(255,255,255,.03));
-      color:rgba(234,240,255,.82);
-      font-size:13px;
-    }
+        .btn-outline:hover {
+            background: var(--color-accent);
+            color: var(--color-white);
+        }
 
-    /* CONTACT */
-    .contact{
-      padding:22px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:14px;
-    }
-    .contact a{color:var(--accent2); text-decoration: underline; text-underline-offset: 3px}
+        .card {
+            background: var(--gradient-card);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 1rem;
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
 
-    footer{
-      padding:18px 0 44px;
-      color:rgba(234,240,255,.62);
-      font-size:13px;
-    }
+        .card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
 
-    /* MOBILE */
-    @media (max-width: 900px){
-      .hero{grid-template-columns: 1fr}
-      h1{font-size:34px}
-      .grid3{grid-template-columns: 1fr}
-      .grid2{grid-template-columns: 1fr}
-      .contact{grid-template-columns: 1fr}
-      .menu{display:none}
-    }
-  </style>
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            border-radius: 2rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--color-accent);
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            background: rgba(11, 18, 32, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: var(--color-text);
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--color-white);
+            font-size: 1.25rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-text);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav a {
+            color: var(--color-text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .nav a:hover {
+            color: var(--color-accent);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--color-text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: calc(var(--header-height) + 4rem) 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(56, 189, 248, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, var(--color-text) 0%, var(--color-accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--color-text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .hero-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        /* ===== SECTIONS ===== */
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--color-text);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--color-text-muted);
+            text-align: center;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ===== SERVICIOS ===== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--color-white);
+        }
+
+        .service-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .service-description {
+            color: var(--color-text-muted);
+            line-height: 1.6;
+        }
+
+        /* ===== MISIÓN & VISIÓN ===== */
+        .mission-vision {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .mission-card, .vision-card {
+            text-align: center;
+        }
+
+        .mission-icon, .vision-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--color-white);
+        }
+
+        .mission-title, .vision-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .mission-text, .vision-text {
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        /* ===== COBERTURA ===== */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .coverage-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-accent);
+        }
+
+        .coverage-list {
+            list-style: none;
+        }
+
+        .coverage-list li {
+            color: var(--color-text-muted);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+        }
+
+        .coverage-list li:before {
+            content: '✓';
+            color: var(--color-secondary);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* ===== CONTACTO ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
+            font-size: 1.25rem;
+        }
+
+        .contact-details h4 {
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 0.25rem;
+        }
+
+        .contact-details p {
+            color: var(--color-text-muted);
+        }
+
+        .contact-details a {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .map-placeholder {
+            background: var(--gradient-card);
+            border: 2px dashed rgba(56, 189, 248, 0.3);
+            border-radius: 1rem;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-text-muted);
+            font-size: 1.125rem;
+        }
+
+        .contact-cta {
+            text-align: center;
+            padding: 2rem;
+            background: var(--gradient-card);
+            border-radius: 1rem;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .contact-cta h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-text);
+        }
+
+        .contact-cta p {
+            color: var(--color-text-muted);
+            margin-bottom: 2rem;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: rgba(11, 18, 32, 0.8);
+            border-top: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            :root {
+                --container-padding: 1rem;
+                --section-padding: 3rem 0;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero-pills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .services-grid,
+            .mission-vision,
+            .coverage-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2rem; }
+            .section-title { font-size: 2rem; }
+            .card { padding: 1.5rem; }
+        }
+
+        /* ===== ANIMACIONES ===== */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        /* Mejoras de accesibilidad */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus states */
+        .btn:focus,
+        .nav a:focus,
+        .logo:focus {
+            outline: 2px solid var(--color-accent);
+            outline-offset: 2px;
+        }
+    </style>
 </head>
-
 <body>
-
-<header>
-  <div class="wrap">
-    <div class="nav">
-      <div class="brand">
-        <div class="badge" aria-hidden="true">
-          <!-- escudo minimal -->
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2l7 4v6c0 5-3.2 9.3-7 10-3.8-.7-7-5-7-10V6l7-4z"
-                  stroke="rgba(234,240,255,.92)" stroke-width="1.6"/>
-            <path d="M9.2 12.2l1.8 1.8 3.8-4.3" stroke="rgba(244,201,93,.95)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#inicio" class="logo">
+                    <div class="logo-icon">M</div>
+                    <span class="logo-text">Mafer SpA</span>
+                </a>
+                
+                <nav>
+                    <ul class="nav">
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#mision-vision">Misión & Visión</a></li>
+                        <li><a href="#cobertura">Cobertura</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="mobile-menu-btn" aria-label="Menú móvil">☰</button>
+            </div>
         </div>
-        <div class="name">
-          <div>Mafer SpA</div>
-          <small>Seguridad privada · Control de acceso</small>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1 class="hero-title fade-in-up">
+                Seguridad Profesional para<br>
+                Infraestructuras Críticas
+            </h1>
+            
+            <p class="hero-subtitle fade-in-up">
+                Servicios de seguridad privada confiables, con respuesta rápida y cumplimiento normativo OS10 para proteger lo que más importa.
+            </p>
+            
+            <div class="hero-pills fade-in-up">
+                <div class="pill">🛡️ Vigilancia 24/7</div>
+                <div class="pill">✅ Cumplimiento OS10</div>
+                <div class="pill">🚨 Atención en terreno</div>
+                <div class="pill">💬 Cotización inmediata</div>
+            </div>
+            
+            <div class="hero-cta fade-in-up">
+                <a href="https://wa.me/56974515523?text=Hola%2C%20necesito%20informaci%C3%B3n%20y%20una%20cotizaci%C3%B3n%20por%20servicios%20de%20seguridad.%20Ubicaci%C3%B3n%3A%20____%20%7C%20Turnos%3A%20____%20%7C%20Puestos%3A%20____."
+                   class="btn btn-primary"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    📱 Cotizar por WhatsApp
+                </a>
+                <a href="mailto:contacto@maferspa.cl?subject=Consulta%20servicios%20de%20seguridad&body=Estimados%2C%0A%0ANecesito%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad%20privada.%0A%0ASaludos."
+                   class="btn btn-secondary">
+                    ✉️ Correo corporativo
+                </a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <nav class="menu" aria-label="Navegación">
-        <a href="#servicios">Servicios</a>
-        <a href="#compromisos">Compromisos</a>
-        <a href="#mision-vision">Misión & Visión</a>
-        <a href="#cobertura">Cobertura</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </div>
-</header>
-
-<main class="wrap">
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="card hero-left">
-      <h1>Protección, control<br/>y respuesta operativa</h1>
-
-      <p class="sub">
-        <strong>Mafer SpA</strong> entrega servicios de seguridad privada con enfoque corporativo:
-        control de accesos, vigilancia, rondas y apoyo operativo para empresas e instalaciones de alta exigencia.
-      </p>
-
-      <div class="pill-row">
-        <div class="pill">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 2l7 4v6c0 5-3.2 9.3-7 10-3.8-.7-7-5-7-10V6l7-4z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
-          </svg>
-          Protocolos claros
+    <!-- ===== SERVICIOS ===== -->
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">
+                Soluciones integrales de seguridad privada con personal capacitado y apoyo tecnológico.
+            </p>
+            
+            <div class="services-grid">
+                <div class="card fade-in-up">
+                    <div class="service-icon">🛡️</div>
+                    <h3 class="service-title">Vigilancia y Seguridad Privada</h3>
+                    <p class="service-description">
+                        Patrullajes, control perimetral y protección de instalaciones con protocolos definidos y coordinación con contraparte.
+                    </p>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <div class="service-icon">🏭</div>
+                    <h3 class="service-title">Seguridad para Infraestructura Crítica</h3>
+                    <p class="service-description">
+                        Apoyo a operaciones de alta exigencia: control de accesos, resguardo y continuidad operacional según requerimiento del cliente.
+                    </p>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <div class="service-icon">🔧</div>
+                    <h3 class="service-title">Apoyo y Mantención de Sistemas</h3>
+                    <p class="service-description">
+                        Soporte operativo para CCTV, alarmas y control de acceso: revisión, registros y coordinación de mantenciones.
+                    </p>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <div class="service-icon">🚨</div>
+                    <h3 class="service-title">Respuesta y Soporte</h3>
+                    <p class="service-description">
+                        Gestión de novedades, escalamiento según severidad y respuesta coordinada en terreno según protocolos del servicio.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="pill">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M20 7l-9 10-5-5" stroke="rgba(74,222,128,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Reportabilidad
+    </section>
+
+    <!-- ===== MISIÓN & VISIÓN ===== -->
+    <section id="mision-vision" class="section">
+        <div class="container">
+            <h2 class="section-title">Misión & Visión</h2>
+            
+            <div class="mission-vision">
+                <div class="mission-card fade-in-up">
+                    <div class="mission-icon">🎯</div>
+                    <h3 class="mission-title">Nuestra Misión</h3>
+                    <p class="mission-text">
+                        Entregar servicios de seguridad privada con estándares profesionales, personal capacitado y protocolos verificables, resguardando personas, activos e instalaciones.
+                    </p>
+                </div>
+                
+                <div class="vision-card fade-in-up">
+                    <div class="vision-icon">🚀</div>
+                    <h3 class="vision-title">Nuestra Visión</h3>
+                    <p class="vision-text">
+                        Ser un proveedor confiable de seguridad privada en Chile, destacando por la mejora continua, coordinación operativa y calidad del servicio.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="pill">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 6v6l4 2" stroke="rgba(244,201,93,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z" stroke="rgba(234,240,255,.75)" stroke-width="1.6"/>
-          </svg>
-          Coordinación por turnos
+    </section>
+
+    <!-- ===== COBERTURA ===== -->
+    <section id="cobertura" class="section">
+        <div class="container">
+            <h2 class="section-title">Cobertura Territorial</h2>
+            <p class="section-subtitle">
+                Base operativa en Coquimbo, con servicios en otras regiones según requerimiento del cliente.
+            </p>
+            
+            <div class="coverage-grid">
+                <div class="card fade-in-up">
+                    <h3 class="coverage-title">Área Cubierta Actualmente</h3>
+                    <ul class="coverage-list">
+                        <li>Coquimbo (Casa Matriz)</li>
+                        <li>Región de Coquimbo y alrededores</li>
+                        <li>Servicios en otras regiones según coordinación y contrato</li>
+                    </ul>
+                </div>
+                
+                <div class="card fade-in-up">
+                    <h3 class="coverage-title">Expansión en Desarrollo</h3>
+                    <ul class="coverage-list">
+                        <li>Región de Atacama</li>
+                        <li>Región de Antofagasta</li>
+                        <li>Proyectos de infraestructura crítica y minería</li>
+                        <li>Cobertura según demanda del cliente</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="cta">
-        <a class="btn primary" target="_blank"
-           href="https://wa.me/56974515523?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20servicios%20de%20seguridad%20(ubicaci%C3%B3n%2C%20horarios%20y%20tipo%20de%20recinto).">
-          <!-- icon whatsapp simple -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M20.5 11.9a8.5 8.5 0 0 1-12.3 7.6L3 21l1.6-5A8.5 8.5 0 1 1 20.5 11.9z" stroke="rgba(11,16,32,.85)" stroke-width="1.7" stroke-linejoin="round"/>
-            <path d="M9.3 8.8c.2-.4.4-.4.7-.4h.6c.2 0 .4.1.5.4l.8 1.8c.1.2.1.4 0 .5l-.4.5c-.1.2-.2.4 0 .6.4.7 1.3 1.6 2.2 2 .2.1.4.1.6 0l.6-.4c.2-.1.4-.1.5 0l1.8.8c.3.1.4.3.4.5v.6c0 .3 0 .5-.4.7-.4.3-1.1.6-1.8.5-1.1-.2-2.5-.9-3.7-2.1-1.2-1.2-1.9-2.6-2.1-3.7-.1-.7.2-1.4.5-1.8z"
-                  fill="rgba(11,16,32,.75)"/>
-          </svg>
-          Cotizar por WhatsApp <span class="tag">rápido</span>
-        </a>
-
-        <a class="btn" href="mailto:contacto@maferspa.cl?subject=Cotizaci%C3%B3n%20Mafer%20SpA">
-          Enviar correo
-        </a>
-      </div>
-
-      <div class="hero-strip">
-        <span><span class="dot"></span><strong>Enfoque:</strong> prevención, control y continuidad operacional.</span>
-        <span>•</span>
-        <span><strong>Entrega:</strong> bitácoras, novedades y coordinación con contraparte.</span>
-      </div>
-    </div>
-
-    <div class="hero-right">
-      <div class="mini">
-        <strong>
-          <!-- pin -->
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 22s7-5.1 7-12a7 7 0 1 0-14 0c0 6.9 7 12 7 12z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
-            <path d="M12 10.5a2.3 2.3 0 1 0 0-4.6 2.3 2.3 0 0 0 0 4.6z" fill="rgba(244,201,93,.95)"/>
-          </svg>
-          Dirección
-        </strong>
-        <span>📍 Aníbal Pinto 1440, Segundo Piso, Coquimbo</span>
-      </div>
-
-      <div class="mini">
-        <strong>
-          <!-- phone -->
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M6.5 3h2l1 5-2 1c1 3 3 5 6 6l1.1-2 5 1v2c0 1-1 2-2 2-8.3 0-15-6.7-15-15 0-1 1-2 2-2z" stroke="rgba(234,240,255,.85)" stroke-width="1.6" stroke-linejoin="round"/>
-          </svg>
-          Contacto
-        </strong>
-        <span>☎ +56 9 7451 5523<br/>✉ <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a></span>
-      </div>
-
-      <div class="mini">
-        <strong>
-          <!-- clock -->
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-            <path d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10z" stroke="rgba(234,240,255,.85)" stroke-width="1.6"/>
-            <path d="M12 6v6l4 2" stroke="rgba(76,195,255,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Coordinación
-        </strong>
-        <span>🕒 Atención administrativa Lun–Vie<br/>Operación según contrato / turnos</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- SERVICIOS -->
-  <section id="servicios">
-    <div class="section-title">
-      <h2>Servicios</h2>
-      <p>Seguridad ejecutable, medible y coordinada.</p>
-    </div>
-
-    <div class="grid3">
-      <div class="card item">
-        <h3>
-          <span style="color:var(--accent)">▣</span> Vigilancia y rondas
-        </h3>
-        <p>Guardias, rondas planificadas, control perimetral y gestión de novedades con bitácora y reportes.</p>
-      </div>
-      <div class="card item">
-        <h3>
-          <span style="color:var(--accent2)">▣</span> Control de acceso
-        </h3>
-        <p>Accesos peatonales y vehiculares, acreditación, verificación, protocolos y coordinación con contraparte.</p>
-      </div>
-      <div class="card item">
-        <h3>
-          <span style="color:var(--ok)">▣</span> Apoyo a sistemas
-        </h3>
-        <p>Operación y apoyo en CCTV, alarmas y control de acceso: revisión, registros y coordinación de mantenciones.</p>
-      </div>
-    </div>
-
-    <div class="callout">
-      <strong>Enfoque operativo:</strong> prevención, control de riesgos y comunicación. La seguridad no es “presencia”; es procedimiento.
-    </div>
-  </section>
-
-  <!-- COMPROMISOS -->
-  <section id="compromisos">
-    <div class="section-title">
-      <h2>Compromisos operativos</h2>
-      <p>Lo que te asegura que esto funciona en la vida real.</p>
-    </div>
-
-    <div class="grid3">
-      <div class="card item">
-        <h3><span style="color:var(--accent)">▣</span> Reportabilidad</h3>
-        <p>Novedades claras, bitácoras y escalamiento según severidad (incidente, observación, hallazgo).</p>
-      </div>
-      <div class="card item">
-        <h3><span style="color:var(--accent2)">▣</span> Coordinación</h3>
-        <p>Punto de contacto definido, coordinación por turnos y continuidad operacional en servicios críticos.</p>
-      </div>
-      <div class="card item">
-        <h3><span style="color:var(--ok)">▣</span> Mejora continua</h3>
-        <p>Revisión de procedimientos, control de puntos vulnerables y ajustes según operación y entorno.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- MISION / VISION -->
-  <section id="mision-vision">
-    <div class="section-title">
-      <h2>Misión & Visión</h2>
-      <p>Seriedad, sin humo.</p>
-    </div>
-
-    <div class="grid2">
-      <div class="card item">
-        <h3>Misión</h3>
-        <p>
-          Entregar servicios de seguridad privada con estándares corporativos, enfocándonos en prevención,
-          control de acceso y continuidad operacional, con procedimientos verificables y comunicación efectiva.
-        </p>
-      </div>
-
-      <div class="card item">
-        <h3>Visión</h3>
-        <p>
-          Consolidarnos como un proveedor confiable en Chile para empresas e instalaciones de alta exigencia,
-          fortaleciendo capacidad operativa, reportabilidad e integración con sistemas de seguridad.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- COBERTURA -->
-  <section id="cobertura">
-    <div class="section-title">
-      <h2>Cobertura</h2>
-      <p>Base en Coquimbo, operación según planificación.</p>
-    </div>
-
-    <div class="grid2">
-      <div class="card item">
-        <h3>Área principal</h3>
-        <p>
-          ✅ Coquimbo y alrededores.<br>
-          ✅ Servicios en otras regiones según requerimiento del cliente y coordinación operativa.
-        </p>
-      </div>
-      <div class="card item">
-        <h3>Áreas por cubrir</h3>
-        <p>
-          🎯 Región de Atacama / Antofagasta y RM según demanda.<br>
-          🎯 Disponibilidad para contratos con operación por turnos y coordinación con contraparte.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="section-title">
-      <h2>Contacto</h2>
-      <p>Cotización rápida con información mínima.</p>
-    </div>
-
-    <div class="card contact">
-      <div>
-        <h3>Datos corporativos</h3>
-        <p style="margin:0; color: var(--muted);">
-          <strong>Mafer SpA</strong><br/>
-          📍 Aníbal Pinto 1440, Segundo Piso, Coquimbo<br/>
-          📞 Teléfono / WhatsApp: +56 9 7451 5523<br/>
-          ✉️ Correo corporativo: <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a>
-        </p>
-
-        <div class="callout">
-          Para cotizar, indica: <strong>ubicación</strong>, <strong>tipo de recinto</strong>, <strong>cantidad de puestos</strong> y <strong>turnos</strong>.
+    <!-- ===== CONTACTO ===== -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">
+                Estamos disponibles para atender sus consultas y brindar soluciones personalizadas.
+            </p>
+            
+            <div class="contact-grid">
+                <div class="contact-info fade-in-up">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Dirección</h4>
+                            <p>Aníbal Pinto 1440, Segundo Piso<br>Coquimbo, Chile</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-details">
+                            <h4>WhatsApp</h4>
+                            <p>
+                                <a href="https://wa.me/56974515523" target="_blank" rel="noopener noreferrer">
+                                    +56 9 7451 5523
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Correo Electrónico</h4>
+                            <p><a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div class="contact-details">
+                            <h4>Horario de Atención</h4>
+                            <p>Lunes a Viernes: 08:00 - 18:00<br>Emergencias: 24/7</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-placeholder fade-in-up">
+                    <!-- Placeholder para mapa -->
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🗺️</div>
+                        <p>Mapa de ubicación<br>Coquimbo</p>
+                        <!-- Reemplazar con: <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-cta fade-in-up">
+                <h3>¿Necesita una cotización personalizada?</h3>
+                <p>Contáctenos ahora y reciba una propuesta adaptada a sus necesidades específicas de seguridad.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://wa.me/56974515523?text=Hola%2C%20necesito%20una%20cotizaci%C3%B3n%20por%20servicios%20de%20seguridad.%20Ubicaci%C3%B3n%3A%20____%20%7C%20Turnos%3A%20____%20%7C%20Puestos%3A%20____."
+                       class="btn btn-primary"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        📱 WhatsApp Directo
+                    </a>
+                    <a href="mailto:contacto@maferspa.cl?subject=Solicitud%20de%20cotizaci%C3%B3n&body=Estimados%2C%0A%0ASolicito%20cotizaci%C3%B3n%20para%20servicios%20de%20seguridad%20privada.%0A%0ADetalles%20del%20proyecto%3A%0A-%20Tipo%20de%20servicio%3A%0A-%20Ubicaci%C3%B3n%3A%0A-%20Horarios%3A%0A-%20Observaciones%3A%0A%0ASaludos."
+                       class="btn btn-secondary">
+                        ✉️ Solicitar Cotización
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div>
-        <h3>Acción rápida</h3>
-        <div class="cta">
-          <a class="btn primary" target="_blank"
-             href="https://wa.me/56974515523?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20seguridad.%20Ubicaci%C3%B3n%3A%20____%20%7C%20Recinto%3A%20____%20%7C%20Turnos%3A%20____%20%7C%20Puestos%3A%20____.">
-            Cotizar por WhatsApp <span class="tag">prioridad</span>
-          </a>
-          <a class="btn" href="#servicios">Ver servicios</a>
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Mafer SpA - Todos los derechos reservados. Sitio web estático.</p>
         </div>
+    </footer>
 
-        <p style="margin:10px 0 0; color: var(--muted); font-size:13px;">
-          Respuesta en horario hábil. Coordinación de operación según programación del servicio.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- ===== JAVASCRIPT BÁSICO ===== -->
+    <script>
+        // Smooth scroll para navegación
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.offsetTop - headerHeight;
 
-  <footer>
-    © <span id="year"></span> Mafer SpA — Sitio web corporativo.
-  </footer>
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
 
-</main>
+        // Header background al hacer scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(11, 18, 32, 0.98)';
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.background = 'rgba(11, 18, 32, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+        // Animación de entrada para elementos
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
 
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Menú móvil básico (opcional)
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('.nav');
+
+        if (mobileMenuBtn && nav) {
+            mobileMenuBtn.addEventListener('click', function() {
+                nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+                nav.style.position = 'absolute';
+                nav.style.top = '100%';
+                nav.style.left = '0';
+                nav.style.right = '0';
+                nav.style.background = 'rgba(11, 18, 32, 0.98)';
+                nav.style.flexDirection = 'column';
+                nav.style.padding = '1rem';
+                nav.style.borderTop = '1px solid rgba(56, 189, 248, 0.2)';
+            });
+        }
+    </script>
 </body>
 </html>
