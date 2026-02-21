@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mafer SpA | Servicios</title>
+  <meta name="description" content="Mafer SpA: servicios profesionales. Cotiza por WhatsApp o correo." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#111a2e;
+      --text:#e9eefc;
+      --muted:#b7c1dd;
+      --brand:#38bdf8;
+      --brand2:#22c55e;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 12px 28px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 700px at 20% -10%, rgba(56,189,248,.22), transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, rgba(34,197,94,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px}
+    header{
+      position:sticky; top:0; z-index:10;
+      background: rgba(11,18,32,.72);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px;
+    }
+    .logo{
+      width:36px; height:36px; border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      box-shadow: var(--shadow);
+    }
+    .menu{display:flex; gap:14px; flex-wrap:wrap}
+    .menu a{
+      padding:10px 12px; border-radius:12px;
+      color:var(--muted);
+    }
+    .menu a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+    .hero{
+      padding:54px 0 10px;
+      display:grid; grid-template-columns: 1.2fr .8fr;
+      gap:22px;
+      align-items:stretch;
+    }
+    .card{
+      background:rgba(17,26,46,.8);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero-left{padding:28px}
+    h1{margin:0 0 10px; font-size:42px; line-height:1.08}
+    .lead{color:var(--muted); font-size:16px; margin:0 0 18px}
+    .pill-row{display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 18px}
+    .pill{
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.05);
+      padding:8px 10px;
+      border-radius:999px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .cta{display:flex; gap:12px; flex-wrap:wrap; margin-top:14px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 14px; border-radius:14px;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.06);
+      font-weight:700;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(56,189,248,.95), rgba(34,197,94,.85));
+      border:0;
+      color:#06121f;
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .hero-right{
+      padding:20px;
+      display:grid; gap:12px;
+    }
+    .mini{
+      padding:16px;
+    }
+    .mini strong{display:block; margin-bottom:6px}
+    .mini span{color:var(--muted); font-size:14px}
+    section{padding:26px 0}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:14px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:14px}
+    .item{padding:18px}
+    .item h3{margin:0 0 8px}
+    .item p{margin:0; color:var(--muted)}
+    .section-title{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:10px;
+      margin-bottom:14px;
+    }
+    .section-title h2{margin:0; font-size:22px}
+    .section-title p{margin:0; color:var(--muted); font-size:14px}
+    .contact{
+      padding:22px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:14px;
+    }
+    .contact a{color:var(--brand)}
+    footer{
+      padding:18px 0 40px;
+      color:rgba(233,238,252,.65);
+      font-size:13px;
+    }
+
+    @media (max-width: 900px){
+      .hero{grid-template-columns: 1fr}
+      h1{font-size:34px}
+      .grid3{grid-template-columns: 1fr}
+      .grid2{grid-template-columns: 1fr}
+      .contact{grid-template-columns: 1fr}
+      .menu{display:none}
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>Mafer SpA</div>
+      </div>
+
+      <nav class="menu" aria-label="Navegación">
+        <a href="#servicios">Servicios</a>
+        <a href="#mision-vision">Misión & Visión</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="card hero-left">
+      <h1>Servicios profesionales<br/>con respuesta rápida</h1>
+      <p class="lead">
+        Página institucional de <strong>Mafer SpA</strong>. Aquí presentas lo esencial: qué haces,
+        dónde operas, y cómo te contactan en 10 segundos.
+      </p>
+
+      <div class="pill-row">
+        <div class="pill">✅ Atención en terreno</div>
+        <div class="pill">✅ Cotización por WhatsApp</div>
+        <div class="pill">✅ Cumplimiento y seguridad</div>
+        <div class="pill">✅ Cobertura por zonas</div>
+      </div>
+
+      <div class="cta">
+        <!-- Cambia el número y el mensaje -->
+        <a class="btn primary" target="_blank"
+           href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20un%20servicio.">
+          WhatsApp para cotizar
+        </a>
+
+        <!-- Cambia el correo -->
+        <a class="btn" href="mailto:contacto@maferspa.cl?subject=Cotizaci%C3%B3n%20Mafer%20SpA">
+          Enviar correo
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="card mini">
+        <strong>Dirección</strong>
+        <span>📍 (Completar) Calle / Comuna / Región</span>
+      </div>
+      <div class="card mini">
+        <strong>Horario</strong>
+        <span>🕒 (Completar) Lun–Vie 09:00–18:00</span>
+      </div>
+      <div class="card mini">
+        <strong>Área principal</strong>
+        <span>🗺️ (Completar) Valparaíso / RM / Maule, etc.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section id="servicios">
+    <div class="section-title">
+      <h2>Servicios</h2>
+      <p>Define 3–6 servicios claros. Sin poesía: que se entiendan rápido.</p>
+    </div>
+
+    <div class="grid3">
+      <div class="card item">
+        <h3>Servicio 1</h3>
+        <p>Describe en 1–2 líneas qué haces y qué recibe el cliente.</p>
+      </div>
+      <div class="card item">
+        <h3>Servicio 2</h3>
+        <p>Enfócate en resultados: instalación / mantención / inspección / vigilancia / etc.</p>
+      </div>
+      <div class="card item">
+        <h3>Servicio 3</h3>
+        <p>Agrega condiciones: zona, plazos típicos, y cómo cotizas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISION / VISION -->
+  <section id="mision-vision">
+    <div class="section-title">
+      <h2>Misión & Visión</h2>
+      <p>Breve, honesto y aterrizado.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card item">
+        <h3>Misión</h3>
+        <p>
+          (Escribe aquí) Entregar servicios confiables y seguros, con foco en cumplimiento,
+          calidad y respuesta rápida, adaptándonos a cada cliente.
+        </p>
+      </div>
+
+      <div class="card item">
+        <h3>Visión</h3>
+        <p>
+          (Escribe aquí) Ser una empresa referente en la región por profesionalismo,
+          trazabilidad y mejora continua, expandiendo cobertura y servicios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- COBERTURA -->
+  <section id="cobertura">
+    <div class="section-title">
+      <h2>Cobertura</h2>
+      <p>Donde operas hoy y hacia dónde vas mañana.</p>
+    </div>
+
+    <div class="grid2">
+      <div class="card item">
+        <h3>Área cubierta</h3>
+        <p>
+          ✅ (Completar) Valparaíso, Villa Alemana, Quilpué, Viña del Mar, etc.
+        </p>
+      </div>
+      <div class="card item">
+        <h3>Áreas por cubrir</h3>
+        <p>
+          🎯 (Completar) RM, Maule, Biobío… con fechas o condiciones (“según demanda”).
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto">
+    <div class="section-title">
+      <h2>Contacto</h2>
+      <p>Deja 2 caminos: WhatsApp y correo. Lo demás es lujo.</p>
+    </div>
+
+    <div class="card contact">
+      <div>
+        <h3>Datos</h3>
+        <p style="margin:0; color: var(--muted);">
+          <strong>Mafer SpA</strong><br/>
+          📍 Dirección: (Completar)<br/>
+          📞 Teléfono/WhatsApp: +56 9 XXXXXXXX<br/>
+          ✉️ Correo: <a href="mailto:contacto@maferspa.cl">contacto@maferspa.cl</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Acción rápida</h3>
+        <div class="cta">
+          <a class="btn primary" target="_blank"
+             href="https://wa.me/569XXXXXXXX?text=Hola%20Mafer%20SpA%2C%20quiero%20cotizar%20un%20servicio.">
+            Cotizar por WhatsApp
+          </a>
+          <a class="btn" href="#servicios">Ver servicios</a>
+        </div>
+        <p style="margin:10px 0 0; color: var(--muted); font-size:13px;">
+          Tip: mientras más simple el contacto, más cotizaciones llegan.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Mafer SpA — Sitio estático en GitHub Pages.
+  </footer>
+</main>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
